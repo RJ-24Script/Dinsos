@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Visi & Misi — Dinas Sosial</title>
+  <meta name="description" content="Visi dan Misi Dinas Sosial Kabupaten Manokwari Selatan." />
+  <link rel="icon" href="../../assets/img/Lambang_Kabupaten_Manokwari_Selatan.png" />
+  <!-- Ikon -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+
+  <style>
+    :root{
+      --ink:#0b1726; --muted:#6b7280; --line:#e5e7eb; --bg:#f9fafb;
+      --blue:#2563eb; --blue-600:#1d4ed8; --blue-700:#1e40af;
+    }
+    html,body{background:var(--bg);color:var(--ink);font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif}
+    a{color:inherit}
+
+    /* NAV */
+    .topbar{background:#fff;border-bottom:1px solid var(--line)}
+    .wrap{max-width:1100px;margin:0 auto;padding:10px 16px}
+    .nav a{margin-right:14px;text-decoration:none;color:#374151}
+    .nav a:hover{color:var(--blue-600)}
+    .nav a.active{color:var(--blue-600);font-weight:700}
+
+    /* HERO */
+    .hero{background:linear-gradient(135deg,var(--blue-700) 0%, var(--blue) 100%); color:#fff; text-align:center; padding:40px 16px}
+    .hero h1{margin:0;font-size:1.9rem}
+    .hero p{margin:.4rem 0 0;opacity:.95}
+
+    /* BREADCRUMB */
+    .breadcrumb{background:#fff;border-bottom:1px solid var(--line)}
+    .breadcrumb .wrap{font-size:.92rem}
+    .breadcrumb a{text-decoration:none;color:#4b5563}
+    .breadcrumb a:hover{text-decoration:underline}
+    .sep{color:#9ca3af;margin:0 6px}
+
+    /* GRID */
+    main.wrap{padding:20px 16px 28px}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    @media (max-width:768px){ .grid{grid-template-columns:1fr} }
+
+    /* CARD */
+    .card{
+      background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden
+    }
+    .card-head{
+      text-align:center;padding:20px 16px;
+      background:linear-gradient(135deg,var(--blue-600) 0%, var(--blue) 100%); color:#fff
+    }
+    .card-head .icon{
+      width:60px;height:60px;border-radius:999px;background:rgba(255,255,255,.18);
+      display:grid;place-items:center;margin:0 auto 10px;font-size:22px
+    }
+    .card-body{padding:16px}
+    .lead{font-size:1.05rem;line-height:1.65;color:#111827;text-align:center}
+
+    /* MISSION LIST */
+    .mission{display:flex;align-items:flex-start;gap:12px;background:#f8fafc;border:1px solid #eef2f7;border-radius:12px;padding:12px}
+    .mission + .mission{margin-top:10px}
+    .mission .micon{
+      flex:0 0 40px;width:40px;height:40px;border-radius:999px;
+      background:var(--blue);color:#fff;display:grid;place-items:center;font-size:16px
+    }
+    .mission h3{margin:0 0 4px;font-size:1rem;color:var(--blue-600)}
+    .mission p{margin:0;color:#374151;font-size:.95rem;line-height:1.55}
+
+    /* VALUE STRIP (opsional penguat) */
+    .values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:16px}
+    .v{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center}
+    .v h4{margin:6px 0 0;font-size:.98rem;color:#111827}
+    .v .dot{width:38px;height:38px;border-radius:999px;background:var(--blue);color:#fff;margin:0 auto;display:grid;place-items:center}
+
+    /* CTA & FOOTER */
+    .cta{margin-top:14px}
+    .btn{
+      display:inline-flex;align-items:center;gap:8px;background:var(--blue-600);
+      color:#fff;text-decoration:none;padding:8px 12px;border-radius:8px
+    }
+    .btn:hover{background:#1e40af}
+    footer{border-top:1px solid var(--line);text-align:center;padding:18px;color:#6b7280;background:#fff;margin-top:24px}
+
+    /* Fade-in sederhana */
+    .fade{opacity:0;transform:translateY(12px);transition:opacity .4s ease, transform .4s ease}
+    .fade.show{opacity:1;transform:none}
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="topbar">
+    <div class="wrap" style="display:flex;align-items:center;gap:12px;justify-content:space-between">
+      <a href="../../index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none">
+        <img src="../../assets/img/Lambang_Kabupaten_Manokwari_Selatan.png" alt="Logo" width="36" height="36" />
+        <strong>Dinas Sosial</strong>
+      </a>
+      <nav class="nav" aria-label="Navigasi utama">
+        <a href="../../index.html">Beranda</a>
+        <a href="./visi-misi.html" class="active" aria-current="page">Visi & Misi</a>
+        <a href="./struktur.html">Struktur</a>
+        <a href="./tupoksi.html">Tupoksi</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Visi & Misi</h1>
+    <p>Arah dan tujuan penyelenggaraan urusan sosial di Kabupaten Manokwari Selatan</p>
+  </section>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <div class="wrap">
+      <a href="../../index.html">Beranda</a><span class="sep">›</span>
+      <a href="../profil.html">Profil</a><span class="sep">›</span>
+      <strong>Visi & Misi</strong>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <main class="wrap">
+    <div class="grid">
+      <!-- VISI -->
+      <section class="card fade" id="visi">
+        <header class="card-head">
+          <div class="icon"><i class="fa-solid fa-eye" aria-hidden="true"></i></div>
+          <h2 class="text-2xl font-bold" style="margin:0">Visi</h2>
+        </header>
+        <div class="card-body">
+          <p class="lead">“Terwujudnya kesejahteraan sosial masyarakat yang inklusif, berkeadilan, dan berkelanjutan.”</p>
+          <div class="values" aria-label="Nilai penguat visi">
+            <div class="v">
+              <div class="dot"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i></div>
+              <h4>Berkeadilan</h4>
+            </div>
+            <div class="v">
+              <div class="dot"><i class="fa-solid fa-people-group" aria-hidden="true"></i></div>
+              <h4>Inklusif</h4>
+            </div>
+            <div class="v">
+              <div class="dot"><i class="fa-solid fa-leaf" aria-hidden="true"></i></div>
+              <h4>Berkelanjutan</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- MISI -->
+      <section class="card fade" id="misi">
+        <header class="card-head">
+          <div class="icon"><i class="fa-solid fa-rocket" aria-hidden="true"></i></div>
+          <h2 class="text-2xl font-bold" style="margin:0">Misi</h2>
+        </header>
+        <div class="card-body">
+          <article class="mission">
+            <div class="micon"><i class="fa-solid fa-shield-heart" aria-hidden="true"></i></div>
+            <div>
+              <h3>Perlindungan & Jaminan Sosial</h3>
+              <p>Peningkatan kualitas layanan perlindungan serta jaminan sosial yang tepat sasaran.</p>
+            </div>
+          </article>
+          <article class="mission">
+            <div class="micon"><i class="fa-solid fa-children" aria-hidden="true"></i></div>
+            <div>
+              <h3>Pemberdayaan Kelompok Rentan</h3>
+              <p>Pemberdayaan lansia, disabilitas, anak, dan keluarga prasejahtera secara berkelanjutan.</p>
+            </div>
+          </article>
+          <article class="mission">
+            <div class="micon"><i class="fa-solid fa-database" aria-hidden="true"></i></div>
+            <div>
+              <h3>Penguatan Data Terpadu (DTKS)</h3>
+              <p>Pemutakhiran DTKS yang akurat dan adaptif sebagai dasar perencanaan program.</p>
+            </div>
+          </article>
+          <article class="mission">
+            <div class="micon"><i class="fa-solid fa-handshake" aria-hidden="true"></i></div>
+            <div>
+              <h3>Kolaborasi Lintas Sektor</h3>
+              <p>Sinergi dengan pemangku kepentingan untuk percepatan penanganan kemiskinan.</p>
+            </div>
+          </article>
+          <article class="mission">
+            <div class="micon"><i class="fa-solid fa-bullhorn" aria-hidden="true"></i></div>
+            <div>
+              <h3>Transparansi & Partisipasi</h3>
+              <p>Transparansi layanan serta pelibatan masyarakat dalam perencanaan dan evaluasi.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <p class="cta" style="text-align:center">
+      <a href="../profil.html" class="btn"><i class="fa-solid fa-arrow-left-long" aria-hidden="true"></i> Kembali ke Profil</a>
+    </p>
+  </main>
+
+  <footer>
+    &copy; 2025 Dinas Sosial Kabupaten Manokwari Selatan. Semua hak dilindungi.
+  </footer>
+
+  <script>
+    // Fade-in sederhana saat elemen masuk viewport
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target); }});
+    }, {threshold:0.15});
+    document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+  </script>
+</body>
+</html>
