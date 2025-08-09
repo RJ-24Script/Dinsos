@@ -166,7 +166,5 @@ document.addEventListener('DOMContentLoaded', () => {
     if (run && Array.isArray(pengumuman)) {
       run.innerHTML = pengumuman.slice(0, 6).map(p => `<span class="mr-8">${p.judul}</span>`).join('');
     }
-
-    
   });
 });
