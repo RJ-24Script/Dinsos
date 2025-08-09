@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Struktur Organisasi — Dinsos Manokwari Selatan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body class="bg-slate-50 font-[Poppins]">
+  <!-- Header -->
+  <header class="bg-blue-800 text-white py-4">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center">
+        <img src="../assets/img/Lambang_Kabupaten_Manokwari_Selatan.png" alt="Logo" class="w-12 h-12 mr-4">
+        <div>
+          <h1 class="text-xl font-bold">STRUKTUR ORGANISASI</h1>
+          <p class="text-sm opacity-90">Dinas Sosial Kabupaten Manokwari Selatan</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Tab Navigation -->
+  <nav class="bg-white shadow-md">
+    <div class="container mx-auto px-4">
+      <div class="flex space-x-8">
+        <a href="profil.html" class="py-4 px-2 text-gray-600 hover:text-blue-600 transition">Profil</a>
+        <a href="struktur-organisasi.html" class="py-4 px-2 text-blue-600 border-b-2 border-blue-600 font-semibold">Struktur Organisasi</a>
+        <a href="tugas-pokok-fungsi.html" class="py-4 px-2 text-gray-600 hover:text-blue-600 transition">Tugas Pokok & Fungsi</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container mx-auto px-4 py-8">
+    <div class="max-w-4xl mx-auto">
+      <!-- Page Header -->
+      <div class="mb-8">
+        <h1 class="text-3xl font-bold text-gray-800 mb-2">Struktur Organisasi</h1>
+        <p class="text-gray-600">Susunan organisasi dan pembagian tugas Dinas Sosial Kabupaten Manokwari Selatan</p>
+      </div>
+
+      <!-- Organizational Chart -->
+      <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+        <h2 class="text-xl font-semibold mb-4 text-gray-800">Bagan Struktur Organisasi</h2>
+        
+        <!-- Kepala Dinas -->
+        <div class="text-center mb-8">
+          <div class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md">
+            <h3 class="font-bold text-lg">KEPALA DINAS</h3>
+            <p class="text-sm opacity-90">Dr. [Nama Kepala Dinas]</p>
+          </div>
+        </div>
+
+        <!-- Sekretaris -->
+        <div class="text-center mb-8">
+          <div class="inline-block bg-blue-500 text-white px-5 py-2 rounded-lg shadow-md">
+            <h4 class="font-semibold">SEKRETARIS</h4>
+            <p class="text-xs opacity-90">[Nama Sekretaris]</p>
+          </div>
+        </div>
+
+        <!-- Bidang -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Bidang Perlindungan Sosial -->
+          <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-md">
+            <div class="bg-green-600 text-white px-4 py-2 rounded-t-lg">
+              <h5 class="font-semibold text-sm">KASUBAG PERLINDUNGAN SOSIAL</h5>
+            </div>
+            <div class="mt-3">
+              <p class="text-sm text-gray-700 mb-2">[Nama Kasubag]</p>
+              <ul class="text-xs text-gray-600 space-y-1">
+                <li>• Penanganan Anak Terlantar</li>
+                <li>• Perlindungan Perempuan & Anak</li>
+                <li>• Penyandang Disabilitas</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Bidang Pemberdayaan Sosial -->
+          <div class="bg-white border border-gray-200 rounded-lg p-4 shadow-md">
+            <div class="bg-purple-600 text-white px-4 py-2 rounded-t-lg">
+              <h5 class="font-semibold text-sm">KASUBAG PEMBERDAYAAN SOSIAL</h5>
+            </div>
+            <div class="mt-3">
+              <p class="text-sm text-gray-700 mb-2">[Nama Kasubag]</p>
+              <ul class="text-xs text-gray-600 space-y-1">
+                <li>• Program Pemberdayaan Masyarakat</li>
+                <li>• Pelatihan Keterampilan</li>
+                <li>• Usaha Ekonomi ProduktInformation Gathered:
+- The main navigation in index.html has a dropdown menu under "PROFIL" with links to sections "Visi & Misi", "Struktur Organisasi", and "Tugas Pokok & Fungsi" in pages/profil.html.
+- The pages/profil.html currently has these sections as separate sections with IDs: "visi-misi", "struktur", and "tupoksi".
+- There is no tab navigation implemented in profil.html; the content is shown as vertical sections.
+- The user wants 2 new tab pages for "struktur organisasi" and "tugas pokok dan fungsi".
+- The existing site uses Tailwind CSS and some custom CSS.
+
+Plan:
+- Create a new page, e.g. pages/struktur.html, with tab navigation containing two tabs: "Struktur Organisasi" and "Tugas Pokok & Fungsi".
+- Each tab will show the respective content currently in profil.html sections "struktur" and "tupoksi".
+- Implement tab switching with minimal JavaScript or Tailwind CSS utilities.
+- Add links in the main navigation or profil.html to this new tab page if needed.
+- Alternatively, if the user wants these tabs inside profil.html, we can convert the "struktur" and "tupoksi" sections into tabs on that page.
+
+Dependent Files to be edited:
+- pages/profil.html (if converting existing sections to tabs)
+- or create new pages/struktur.html (new tab page)
+- assets/js/main.js (if adding tab switching JS)
+- Possibly update navigation in index.html or profil.html to link to new tab page
+
+Followup steps:
+- Confirm with user if they want the tabs inside profil.html or as a separate new page.
+- After confirmation, implement the tabs with Tailwind CSS and minimal JS.
+- Test tab switching functionality.
+
+<ask_followup_question>
+<question>Do you want the "Struktur Organisasi" and "Tugas Pokok & Fungsi" content to be shown as tabs inside the existing profil.html page, or as a new separate page with tabs? Please confirm.</question>
+</ask_followup_question>

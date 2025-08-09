@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pengaduan Masyarakat — Dinsos Manokwari Selatan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body class="bg-slate-50">
+  <div class="container mx-auto px-4 py-8 max-w-3xl">
+    <a href="../index.html" class="text-blue-600 hover:underline">← Beranda</a>
+    <h1 class="text-2xl font-bold mt-4 mb-6">Form Pengaduan Masyarakat</h1>
+
+    <div class="bg-white rounded-lg shadow p-6">
+      <form id="form-pengaduan" class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium mb-1">Nama Lengkap<span class="text-red-600">*</span></label>
+          <input name="nama" required class="w-full border rounded px-3 py-2" placeholder="Nama sesuai KTP" />
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium mb-1">NIK<span class="text-red-600">*</span></label>
+            <input name="nik" required pattern="[0-9]{16}" class="w-full border rounded px-3 py-2" placeholder="16 digit" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">No. HP/WA<span class="text-red-600">*</span></label>
+            <input name="kontak" required class="w-full border rounded px-3 py-2" placeholder="08xxxxxxxxxx" />
+          </div>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Alamat</label>
+          <input name="alamat" class="w-full border rounded px-3 py-2" placeholder="Kampung/Distrik" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Jenis Pengaduan<span class="text-red-600">*</span></label>
+          <select name="jenis" required class="w-full border rounded px-3 py-2">
+            <option value="">-- Pilih --</option>
+            <option>Bansos</option>
+            <option>Disabilitas</option>
+            <option>DTKS</option>
+            <option>Lainnya</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Uraian Pengaduan<span class="text-red-600">*</span></label>
+          <textarea name="uraian" required class="w-full border rounded px-3 py-2" rows="5" placeholder="Jelaskan kronologi dan kebutuhan"></textarea>
+        </div>
+        <div class="flex items-center gap-2 text-xs text-gray-600">
+          <input type="checkbox" required id="setuju" />
+          <label for="setuju">Saya menyatakan data yang diisi benar dan bersedia dihubungi petugas.</label>
+        </div>
+        <div class="flex items-center gap-3">
+          <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded">Kirim Pengaduan</button>
+          <span data-status class="text-sm"></span>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Handler form sederhana (versi inline). Nanti bisa dipindahkan ke assets/js/main.js
+    const GFORM_ENDPOINT = ""; // isi setelah Apps Script jadi.
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('form-pengaduan');
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const btn = form.querySelector('button[type="submit"]');
+        const status = form.querySelector('[data-status]');
+        btn.disabled = true; btn.textContent = 'Mengirim...';
+        status.textContent = '';
+        const data = Object.fromEntries(new FormData(form).entries());
+        try {
+          if (!GFORM_ENDPOINT) throw new Error('Endpoint belum diisi');
+          const res = await fetch(GFORM_ENDPOINT, { method:'POST', body: JSON.stringify(data), headers:{'Content-Type':'application/json'} });
+          if (!res.ok) throw new Error('Gagal mengirim');
+          status.textContent = 'Pengaduan berhasil dikirim. Terima kasih!';
+          form.reset();
+        } catch (err) {
+          status.textContent = 'Gagal mengirim. Coba lagi atau hubungi kami.';
+          console.error(err);
+        } finally {
+          btn.disabled = false; btn.textContent = 'Kirim Pengaduan';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
