@@ -89,31 +89,57 @@
               <ul class="text-xs text-gray-600 space-y-1">
                 <li>• Program Pemberdayaan Masyarakat</li>
                 <li>• Pelatihan Keterampilan</li>
-                <li>• Usaha Ekonomi ProduktInformation Gathered:
-- The main navigation in index.html has a dropdown menu under "PROFIL" with links to sections "Visi & Misi", "Struktur Organisasi", and "Tugas Pokok & Fungsi" in pages/profil.html.
-- The pages/profil.html currently has these sections as separate sections with IDs: "visi-misi", "struktur", and "tupoksi".
-- There is no tab navigation implemented in profil.html; the content is shown as vertical sections.
-- The user wants 2 new tab pages for "struktur organisasi" and "tugas pokok dan fungsi".
-- The existing site uses Tailwind CSS and some custom CSS.
+                <li>• Usaha Ekonomi Produktif</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
 
-Plan:
-- Create a new page, e.g. pages/struktur.html, with tab navigation containing two tabs: "Struktur Organisasi" and "Tugas Pokok & Fungsi".
-- Each tab will show the respective content currently in profil.html sections "struktur" and "tupoksi".
-- Implement tab switching with minimal JavaScript or Tailwind CSS utilities.
-- Add links in the main navigation or profil.html to this new tab page if needed.
-- Alternatively, if the user wants these tabs inside profil.html, we can convert the "struktur" and "tupoksi" sections into tabs on that page.
+      <!-- Contact Information -->
+      <div class="bg-blue-50 rounded-lg p-6 mt-8">
+        <h3 class="text-lg font-semibold text-blue-800 mb-3">Informasi Lebih Lanjut</h3>
+        <p class="text-gray-700 mb-2">
+          Untuk informasi lebih detail mengenai struktur organisasi kami, silakan hubungi:
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 text-sm">
+          <div>
+            <i class="fas fa-phone text-blue-600 mr-2"></i>
+            <span>(000) 000000</span>
+          </div>
+          <div>
+            <i class="fas fa-envelope text-blue-600 mr-2"></i>
+            <span>info@dinsos.mansel.go.id</span>
+          </div>
+          <div>
+            <i class="fas fa-map-marker-alt text-blue-600 mr-2"></i>
+            <span>Kantor Dinas Sosial</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 
-Dependent Files to be edited:
-- pages/profil.html (if converting existing sections to tabs)
-- or create new pages/struktur.html (new tab page)
-- assets/js/main.js (if adding tab switching JS)
-- Possibly update navigation in index.html or profil.html to link to new tab page
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2024 Dinas Sosial Kabupaten Manokwari Selatan</p>
+    </div>
+  </footer>
 
-Followup steps:
-- Confirm with user if they want the tabs inside profil.html or as a separate new page.
-- After confirmation, implement the tabs with Tailwind CSS and minimal JS.
-- Test tab switching functionality.
-
-<ask_followup_question>
-<question>Do you want the "Struktur Organisasi" and "Tugas Pokok & Fungsi" content to be shown as tabs inside the existing profil.html page, or as a new separate page with tabs? Please confirm.</question>
-</ask_followup_question>
+  <script>
+    // Simple tab switching functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add smooth scrolling
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
